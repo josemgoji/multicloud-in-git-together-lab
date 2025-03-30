@@ -18,10 +18,10 @@ on:
         description: Environment to deploy
         type: choice
         options:
-          - 'sandbox'
+          - 'lab-git'
           - 'development'
         required: true
-        default: 'sandbox'
+        default: 'lab-git'
 
 jobs:
   continuos_integration_job:
@@ -60,5 +60,5 @@ jobs:
     - name: 'Run Azure Functions action'
       uses: Azure/functions-action@v1
       with:
-        app-name: ${{ vars.AZF_NAME }}
+        app-name: "jose-lab"
         package: ./workspace
