@@ -36,7 +36,7 @@ jobs:
     permissions:
       contents: read
     needs: continuos_integration_job
-    environment: ${{ inputs.environment || 'sandbox' }}
+    environment: ${{ inputs.environment || 'lab-git' }}
     steps:
     - name: Download artifact from build job
       uses: actions/download-artifact@v4
